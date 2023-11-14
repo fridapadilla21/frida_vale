@@ -1,0 +1,22 @@
+#https://replit.com/join/qisrklrqxi-frida-paulinapa
+
+vendedor = input("¿Hay un vendedor? (si/no)")
+while vendedor == "si":
+  nombre = input("¿Cual es tu nombre? ")
+  salario = int(input("¿Cual es tu salario base? "))
+  ventas = int(input("¿Cuantas ventas hiciste? "))
+  if ventas < 3500:
+    print("Tu porcentaje de comision es 7%")
+    comision = salario * 0.07
+  elif ventas >= 3500 and ventas <7000:
+    print("Tu porcentaje de comision es 10%")
+    comision = salario * 0.10
+  elif ventas >=7000:
+    print("Tu porcentaje de comision es 15%")
+    comision = salario * 0.15
+  else:
+    comision = 0
+    print("TU comision no es valida")
+  sueldo_total = salario + comision 
+  print(f"El sueldo de {nombre} es: {sueldo_total}")
+  vendedor = input("¿Hay un vendedor? (si/no)")
