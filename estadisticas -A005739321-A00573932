@@ -1,0 +1,33 @@
+#https://replit.com/join/qisrklrqxi-frida-paulinapa
+
+contar = 0
+categoria1 = 0
+categoria2 = 0
+categoria3 = 0
+categoria4 = 0
+animal = input("¿Quieres comenzar a contar animales? (si/no) ")
+while animal.lower() == "si":
+  contar += 1
+  #print(contar)
+  edad = int (input("¿Qué edad tiene el animal? "))
+  animal = input("¿Quieres contar mas animales? (si/no) ")
+  if edad < 2:
+    categoria1 += 1
+  elif edad >= 2 and edad < 5:
+    categoria2 +=1
+  elif edad >=5 and edad < 10:
+    categoria3 += 1
+  elif edad >= 10:
+    categoria4 += 1
+  else:
+    print("Esta categoria no esta existente")
+    
+porcentaje1 = categoria1*100/contar
+porcentaje2 = categoria2*100/contar
+porcentaje3 = categoria3*100/contar
+porcentaje4 = categoria4*100/contar
+print(f"Total de animales: {contar},categoria 1: {categoria1}, categoria 2: {categoria2}. categoria 3: {categoria3}, categoria 4:{categoria4}")
+print(f"categoria 1:{porcentaje1}")
+print(f"categoria 2:{porcentaje2}")
+print(f"categoria 3:{porcentaje3}")
+print(f"categoria 4:{porcentaje4}")
